@@ -233,13 +233,15 @@ export default class PrizeWheel extends Vue {
       tag++
     })
 
-    new TWEEN.Tween(this.pickLuckyDogs)
-      .to({}, duration * 2)
-      .onUpdate(this.renderWheel)
-      .start()
-      .onComplete(() => {
-        // 动画结束后可以操作
-      })
+    return new Promise((resolve, reject) => {
+      new TWEEN.Tween(this.pickLuckyDogs)
+        .to({}, duration * 2)
+        .onUpdate(this.renderWheel)
+        .start()
+        .onComplete(() => {
+          resolve()
+        })
+    })
   }
 
   createCard (data: any): any {

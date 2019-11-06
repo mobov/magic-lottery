@@ -17,7 +17,6 @@ export default class Exporter extends Vue {
     // console.log(deepCopy(this.$store.state.Games))
     // console.log(this.$store.state.Games)
     const json = this.$store.state.Games.map((data: any) => {
-      console.log(data.luckyDogs)
       return {
         '奖项': data.name,
         '奖品': data.prize,
