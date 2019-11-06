@@ -77,6 +77,7 @@
       <importer @import="init"/>
       <exporter />
       <result />
+      <a class="button" style="text-decoration: none" href="https://github.com/mobov/magic-lottery#magic-lottery" target="_blank" >使用说明</a>
 <!--      <div class="button" :class="{'&#45;&#45;active': viewType === 'table'}" @click="switchView('table')">表格</div>-->
 <!--      <div class="button"  :class="{'&#45;&#45;active': viewType === 'sphere'}" @click="switchView('sphere')">球体</div>-->
     </div>
