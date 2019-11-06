@@ -1,0 +1,32 @@
+:root {
+  --color-prize: #FF9800;
+  --color-theme: rgba(127, 255, 255, 0.75)
+}
+
+.button-group {
+  display: flex;
+  //> * {
+  //  border-right: none !important;
+  //}
+  //> *:last-child {
+  //  border-right: none;
+  //}
+}
+.button {
+  //color: rgba(127, 255, 255, 0.75);
+  color: white;
+  background: transparent;
+  outline: 1px solid rgba(127, 255, 255, 0.75);
+  border: 0;
+  padding: 8px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  &:hover {
+    background-color: rgba(0, 255, 255, 0.5);
+  }
+
+  &:active {
+    color: #000000;
+    background-color: rgba(0, 255, 255, 0.75);
+  }
+}
