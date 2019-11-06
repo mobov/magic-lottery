@@ -5,7 +5,7 @@ export const NoCache = createDecorator((options, key) => {
   options.computed[key].cache = false
 })
 
-export function createElement (css: string = '', text: string = ''): HTMLElement {
+export function createElement (css: string = '', text: string = ''): any {
   let dom = document.createElement('div')
   dom.className = css
   dom.innerHTML = text

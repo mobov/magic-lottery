@@ -242,7 +242,7 @@ export default class PrizeWheel extends Vue {
       })
   }
 
-  createCard (data: any): HTMLElement {
+  createCard (data: any): any {
     // console.log(this.Selected)
     const element = document.createElement('div')
     element.className = 'member-card'
