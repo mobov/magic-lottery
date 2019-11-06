@@ -27,7 +27,3 @@ export function getRandomGroup (min: number, max: number, count: number): number
   }
   return result
 }
-
-export function importGame () {
-
-}
