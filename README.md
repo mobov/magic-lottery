@@ -1,6 +1,8 @@
 # magic-lottery
 > 通过excel可配置的抽奖平台
 
+[在线地址](http://mobov.github.io/magic-lottery/)
+
 ###  使用说明
  - 通过导出配置获取配置表，并自行改动
  - 然后再导入配置进行抽奖
