@@ -1,6 +1,6 @@
 <template>
     <div class="importer button">
-      <slot>导入配置</slot>
+      <slot>{{textImport}}</slot>
       <input class="uploader"
              title=""
              alt=""
@@ -15,6 +15,10 @@ import xlsx from 'xlsx'
 
 @Component
 export default class Importer extends Vue {
+  get textImport () {
+    return this.$store.state.Text.import
+  }
+
   handleValueChange (e: any) {
     const file = e.target.files[0]
     let reader: any = new FileReader()

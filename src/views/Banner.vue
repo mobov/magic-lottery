@@ -1,6 +1,11 @@
 <template>
   <div class="banner">
-    <span :key="index" v-for="(text, index) in content">{{text}}</span>
+    <div class="title">
+      {{title}}
+    </div>
+    <div>
+      <img v-if="logo" class="logo" :src="logo" alt="logo" />
+    </div>
   </div>
 </template>
 
@@ -9,11 +14,15 @@ import { Component, Vue } from 'vue-property-decorator'
 
 @Component
 export default class Banner extends Vue {
-  get content () {
-    return this.title.split('')
+  // get content () {
+  //   return this.title.split('')
+  // }
+  get logo () {
+    return this.$store.state.Setting.logo
   }
+
   get title () {
-    return this.$store.state.Setting.title
+    return this.$store.state.Text.title
   }
 
   animation () {
@@ -29,6 +38,7 @@ export default class Banner extends Vue {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
     position: fixed;
     left: 20vw;
@@ -37,12 +47,17 @@ export default class Banner extends Vue {
     font-size: 30px;
     z-index: 3;
     /*background: black;*/
-    span{
+    .title {
       /*color: red;*/
       color: white;
       text-align: center;
       border-radius: 50%;
       text-shadow: 0 0 5px orange, 1px 1px 5px orange, 2px 2px 5px orange, -1px -1px 5px orange, -2px -2px 5px orange;
+      margin-bottom: 10px;
+    }
+    .logo {
+      height: 80px;
+      width: auto;
     }
   }
   .glow{

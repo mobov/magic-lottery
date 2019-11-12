@@ -1,6 +1,6 @@
 <template>
     <div class="exporter button" @click="handleExport">
-      <slot>导出配置</slot>
+      <slot>{{textExport}}</slot>
     </div>
 </template>
 
@@ -11,6 +11,10 @@ import XLSData from '@/assets/setting.xlsx'
 
 @Component
 export default class Exporter extends Vue {
+  get textExport () {
+    return this.$store.state.Text.export
+  }
+
   handleExport () {
     xlsx.writeFile(XLSData, 'game.xlsx')
   }

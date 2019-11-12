@@ -20,8 +20,21 @@ interface State {
   Members: any[]
   Games: Game[]
   Setting: {
-    title: string,
+    title: string
     duration: number
+    logo: string
+    mirror: number
+  },
+  Text: {
+    drawTitle: string
+    title: string
+    draw: string
+    drawing: string
+    end: string
+    import: string
+    export: string
+    result: string
+    readme: string
   }
 }
 
@@ -34,7 +47,20 @@ export default new Vuex.Store({
     Games: [],
     Setting: {
       title: 'XXX抽奖活动',
-      duration: 5000
+      duration: 5000,
+      mirror: 0,
+      logo: ''
+    },
+    Text: {
+      drawTitle: '正在抽取',
+      title: '抽奖活动',
+      draw: '抽奖',
+      drawing: '抽奖中',
+      end: '结束',
+      import: '导入配置',
+      export: '导出配置',
+      result: '导出结果',
+      readme: '使用说明'
     }
   },
   getters: {

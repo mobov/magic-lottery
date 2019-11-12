@@ -1,7 +1,7 @@
 <template>
     <div class="prize-item" :class="classes">
         <div class="prize-img">
-            <img :src="value.cover" :alt="value.prize">
+            <img :src="value.cover" :alt="value.prize" />
         </div>
         <div class="prize-text">
             <h5 class="prize-title">{{value.name}} {{value.prize}}</h5>

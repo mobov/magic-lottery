@@ -1,6 +1,6 @@
 <template>
   <div class="result button" @click="handleExport">
-    <slot>导出结果</slot>
+    <slot>{{textResult}}</slot>
   </div>
 </template>
 
@@ -12,6 +12,10 @@ import deepCopy from '@mobov/es-helper/deepCopy'
 
 @Component
 export default class Exporter extends Vue {
+  get textResult () {
+    return this.$store.state.Text.result
+  }
+
   handleExport () {
     // console.log(XLSData)
     // console.log(deepCopy(this.$store.state.Games))

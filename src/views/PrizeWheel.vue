@@ -69,6 +69,12 @@
     left: calc(50% - 60px);
     color: white;
   }
+  .--mirror {
+    .controls {
+      left: 50px;
+      right: unset;
+    }
+  }
 </style>
 <template>
   <div class="prize-wheel">
@@ -77,7 +83,7 @@
       <importer @import="init"/>
       <exporter />
       <result />
-      <a class="button" style="text-decoration: none" href="https://github.com/mobov/magic-lottery#magic-lottery" target="_blank" >使用说明</a>
+      <a class="button" style="text-decoration: none" href="https://github.com/mobov/magic-lottery#magic-lottery" target="_blank" >{{textReadme}}</a>
 <!--      <div class="button" :class="{'&#45;&#45;active': viewType === 'table'}" @click="switchView('table')">表格</div>-->
 <!--      <div class="button"  :class="{'&#45;&#45;active': viewType === 'sphere'}" @click="switchView('sphere')">球体</div>-->
     </div>
@@ -123,6 +129,9 @@ export default class PrizeWheel extends Vue {
 
   isLottering = false
 
+  get textReadme () {
+    return this.$store.state.Text.readme
+  }
   get duration () {
     return this.$store.state.Setting.duration
   }
@@ -149,11 +158,11 @@ export default class PrizeWheel extends Vue {
     return window.innerWidth
   }
   get buttonText () {
-    let result = '抽奖'
+    let result = this.$store.state.Text.draw
     if (this.isEnd) {
-      result = '结束'
+      result = this.$store.state.Text.end
     } else if (this.isLottering) {
-      result = '抽奖中'
+      result = this.$store.state.Text.drawing
     }
 
     return result

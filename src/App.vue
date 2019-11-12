@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" :class="classes">
     <banner v-if="ready"></banner>
     <background />
     <prize-wheel v-if="ready" />
@@ -24,6 +24,13 @@ import Banner from '@/views/Banner.vue'
 })
 export default class App extends Vue {
   ready = false
+
+  get classes () {
+    return {
+      [`--mirror`]: this.$store.state.Setting.mirror
+    }
+  }
+
   async created () {
     await this.$store.dispatch('initGame')
     this.ready = true
