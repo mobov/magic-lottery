@@ -1,6 +1,8 @@
 # magic-lottery
 > 通过excel可配置的抽奖平台
 
+[在线地址](http://mobov.github.io/magic-lottery/)
+
 ###  使用说明
  - 通过导出配置获取配置表，并自行改动
  - 然后再导入配置进行抽奖
@@ -15,8 +17,8 @@
 | :--- | :--- |:---|:---|
 | name | string | - | 奖项名字|
 | prize | string | - | 奖品名字|
-| total | int | - | 奖项总数 |
-| number | int | - | 每次抽奖的数目(必须是奖项总数的约数)|
+| total | int | - | 奖项总数（必须是number的倍数） |
+| number | int | - | 每次抽奖的数目 |
 | joinNext | 0 / 1 | 0 | 当前的中奖人员是否参与到下一轮抽奖, 0表示不参加下一轮抽奖|
 | cover | url | - | 奖品封面，url或者base64 |
 
@@ -35,7 +37,7 @@
 | 字段 | 类型 | 默认值 | 说明 | 
 | :--- | :--- |:---|:---|
 | mirror | 0 / 1 | 0 | 镜像排版， 0关闭，1打开|
-| duration | int | - | 抽奖转动的持续时间 |
+| duration | int | - | 抽奖转动的持续时间,单位ms |
 
 #### 文案表(text)
 > 文案配置
