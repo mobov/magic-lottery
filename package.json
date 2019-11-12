@@ -2,7 +2,7 @@
   "name": "magic-lottery",
   "version": "0.1.0",
   "private": true,
-  "keywords": ['lottery', 'three.js', '3d', 'vue', '抽奖'],
+  "keywords": ["lottery", "three.js", "3d", "vue", "抽奖"],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
