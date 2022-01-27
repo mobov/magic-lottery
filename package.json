@@ -12,7 +12,7 @@
   "dependencies": {
     "@mobov/es-helper": "^2.0.2",
     "core-js": "^3.3.2",
-    "three": "^0.109.0",
+    "three": "^0.137.0",
     "vue": "^2.6.10",
     "vue-class-component": "^7.0.2",
     "vue-property-decorator": "^8.3.0",
